@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
+    // Player can only jump if on the ground or close enough to the ground
+    // Space bar used to jump
     void Update()
     {
         Vector2 pos = transform.position;
@@ -45,6 +47,8 @@ public class Player : MonoBehaviour
     }
 
 // for equal jumps
+// so jump time is limited and at the top of the jump gravity automatically pulls down
+// limited time a player can hold space to jump
     private void FixedUpdate()
     {
         Vector2 pos = transform.position;
