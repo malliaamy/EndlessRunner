@@ -82,9 +82,9 @@ public class Player : MonoBehaviour
                 Ground ground = hit2D.collider.GetComponent<Ground>();
                 if (ground != null)
                 {
-                       groundHeight = ground.groundHeight;
-                       pos.y = groundHeight;
-                       isGrounded = true;
+                    groundHeight = ground.groundHeight;
+                    pos.y = groundHeight;
+                    isGrounded = true;
                 }
             }
             Debug.DrawRay(rayOrigin, rayDirection * rayDistance, Color.red);
