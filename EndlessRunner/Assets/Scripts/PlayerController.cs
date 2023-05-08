@@ -1,44 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
 
-    public float moveSpeed;
-    public float jumpForce;
+    public Rigidbody2D rb;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
 
-    private Rigidbody2D myRigidbody; 
+    private float jumpingPower = 10f;
 
-
-    public bool grounded;
-    public LayerMask whatIsGround;
-
-    private Collider2D myCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-        myRigidbody = GetComponent<Rigidbody2D>();
-
-        myCollider = GetComponent<Collider2D>();
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    } 
 
-        grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
-
-        myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
-
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if(context.performed && isGrounded())
         {
-            if(grounded)
-            {
-                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
-            }
+            rb.velocity = new Vector2(0, jumpingPower);
         }
+
+        if(context.canceled && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+    }
+
+    private bool isGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 }
