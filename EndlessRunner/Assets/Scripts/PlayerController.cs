@@ -13,9 +13,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
     public TextMeshProUGUI distanceText;
     public TextMeshProUGUI coinText;
-    float distanceUnit = 0;
+    public float distanceUnit = 0;
     float speed = 5;
-    int coinAmount = 0;
+    public int coinAmount = 0;
 
     private float jumpingPower = 10f;
 

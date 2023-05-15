@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public PlayerController playerController;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,9 @@ public class Health : MonoBehaviour
     void TransitionDeath()
     {
         Destroy(gameObject);
+        PlayerPrefs.SetFloat("distanceScore", playerController.distanceUnit);
+        PlayerPrefs.SetInt("coinScore", playerController.coinAmount);
+        SceneManager.LoadScene(2);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
