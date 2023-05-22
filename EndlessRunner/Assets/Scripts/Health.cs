@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    Renderer rend;
+    Color c;
+
     public int maxHealth;
     public int currentHealth;
 
@@ -16,7 +19,8 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        rend = GetComponent<Renderer>();
+        c = rend.material.color;
     }
 
     // Update is called once per frame
@@ -61,6 +65,18 @@ public class Health : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             currentHealth = currentHealth - 1;
+            StartCoroutine("Invulnerable");
         }
+    }
+
+    IEnumerator Invulnerable()
+    {
+        Physics2D.IgnoreLayerCollision (9, 10, true);
+        c.a = 0.5f;
+        rend.material.color = c;
+        yield return new WaitForSeconds (3f);
+        Physics2D.IgnoreLayerCollision (9, 10, false);
+        c.a = 1f;
+        rend.material.color = c;
     }
 }

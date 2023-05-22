@@ -1012,11 +1012,12 @@ GameObject:
   - component: {fileID: 449689581}
   - component: {fileID: 449689580}
   - component: {fileID: 449689583}
+  - component: {fileID: 449689587}
   - component: {fileID: 449689582}
   - component: {fileID: 449689584}
   - component: {fileID: 449689585}
   - component: {fileID: 449689586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1083,7 +1084,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449689578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.9333, y: 12.35, z: 0}
+  m_LocalPosition: {x: 22.9333, y: 12.277, z: 0}
   m_LocalScale: {x: 2.451144, y: 4.0907154, z: 0.58458}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1219,6 +1220,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: c2c1f23d-fe4e-4fa7-827c-f9a4b746b940
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 449689585}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Crouching
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1da47e1c-dede-448b-94e5-dc2f020aa1cb
+    m_ActionName: Player/Crouching[/Keyboard/downArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1266,6 +1283,22 @@ MonoBehaviour:
   fullHeart: {fileID: 21300000, guid: 3d98864a28ad97942adefb45e87cb8a4, type: 3}
   emptyHeart: {fileID: 21300000, guid: a0b8c5155cd1dcb4ab2f0b24850ebd8f, type: 3}
   playerController: {fileID: 449689585}
+--- !u!58 &449689587
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449689578}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007943317, y: -0.20198005}
+  serializedVersion: 2
+  m_Radius: 0.29739213
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,7 +3453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1510255717}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

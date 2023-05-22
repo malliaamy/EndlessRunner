@@ -31,7 +31,7 @@ public class SpawnerController : MonoBehaviour
         else
         {
             rand = airObstacle;
-            height = 15;
+            height = 14;
         }
         
     }

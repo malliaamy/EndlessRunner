@@ -46,6 +46,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void Crouching(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+        {
+            this.GetComponent<BoxCollider2D>().enabled = false;
+            this.GetComponent<CircleCollider2D>().enabled = true; 
+        } 
+
+        else
+        {
+            this.GetComponent<BoxCollider2D>().enabled = true;
+            this.GetComponent<CircleCollider2D>().enabled = false;
+        }
+    }
+
     private bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
