@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7449117374697029270}
   - component: {fileID: 8631525115070633863}
-  - component: {fileID: 2486204313990933102}
   - component: {fileID: -7739381840610727384}
   - component: {fileID: -5284118650910456246}
+  - component: {fileID: 8427115991341164860}
+  - component: {fileID: 3138287357707267665}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -29,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 1121174464591134055}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.372, y: 12.4538, z: 0}
-  m_LocalScale: {x: 1.1439, y: 1.3075986, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1.1431056, z: 0.87420225}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1000
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.7169812, g: 0.6066807, b: 0.10416517, a: 1}
+  m_Sprite: {fileID: -1108168842, guid: bfd5591b79bf1af4183380441d3eaa3e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,22 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &2486204313990933102
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121174464591134055}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &-7739381840610727384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +113,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d223b89502d70d4fa308ea68e30419e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &8427115991341164860
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121174464591134055}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.51, y: 1.72}
+  m_Direction: 0
+--- !u!95 &3138287357707267665
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121174464591134055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a085e99f0ccdf564793c266a50e1db81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

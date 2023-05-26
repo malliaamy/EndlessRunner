@@ -25,6 +25,7 @@ public class ButtonScript : MonoBehaviour
 
     public void MainMenuButton()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
