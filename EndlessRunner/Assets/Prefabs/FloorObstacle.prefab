@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 736693135142465007}
   - component: {fileID: 736693135142465004}
-  - component: {fileID: 736693135142465011}
   - component: {fileID: 6365310990557421927}
   - component: {fileID: 1709591112533258877}
+  - component: {fileID: 5024008538545226125}
   m_Layer: 10
   m_Name: FloorObstacle
   m_TagString: Obstacle
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &736693135142465011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736693135142465008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71289e0463560764babd4faf2d1ce4e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgSpeed: -10
 --- !u!114 &6365310990557421927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +115,15 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0041047605, y: 0.013731018}
   m_Size: {x: 0.71587586, y: 1.138969}
   m_Direction: 0
+--- !u!114 &5024008538545226125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736693135142465008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1604958501581f4e8b81ee911a2406c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

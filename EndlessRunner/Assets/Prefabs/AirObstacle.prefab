@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5074785776628261935}
   - component: {fileID: 5074785776628261932}
-  - component: {fileID: 5074785776628261930}
   - component: {fileID: 2069567613255560868}
   - component: {fileID: 6294653695911169045}
+  - component: {fileID: -9199617937445813687}
   m_Layer: 10
   m_Name: AirObstacle
   m_TagString: Obstacle
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5074785776628261930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5074785776628261931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71289e0463560764babd4faf2d1ce4e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgSpeed: -10
 --- !u!61 &2069567613255560868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,5 +123,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d223b89502d70d4fa308ea68e30419e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-9199617937445813687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074785776628261931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1604958501581f4e8b81ee911a2406c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

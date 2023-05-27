@@ -19,6 +19,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(9, 10, false);
         rend = GetComponent<Renderer>();
         c = rend.material.color;
     }

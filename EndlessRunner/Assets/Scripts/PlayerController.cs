@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     float speed = 5;
     public int coinAmount = 0;
 
-    private float jumpingPower = 10f;
+    public float jumpingPower = 10f;
 
 
     // Start is called before the first frame update
