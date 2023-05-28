@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class toggleScript : MonoBehaviour
 {
     public Toggle toggler;
-
-    void Awake()
-    {
-        PlayerPrefs.SetInt("Music", 2);
-        PlayerPrefs.SetInt("Sound", 2);
-    }
+    public string pref;
     // Start is called before the first frame update
     void Start()
     {
         toggler = GetComponent<Toggle>();
+
+        if(PlayerPrefs.GetInt(pref) == 1)
+        {
+            toggler.isOn = true;
+        }
     }
 
     // Update is called once per frame

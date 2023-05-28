@@ -311,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggler: {fileID: 0}
+  pref: Music
 --- !u!1 &81473935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggler: {fileID: 0}
+  pref: Sound
 --- !u!1 &1414754701
 GameObject:
   m_ObjectHideFlags: 0
