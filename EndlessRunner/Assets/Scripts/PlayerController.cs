@@ -17,9 +17,14 @@ public class PlayerController : MonoBehaviour
     float speed = 5;
     public int coinAmount = 0;
 
+    private Animator animator;
+
     public float jumpingPower = 10f;
 
-
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +34,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        animator.SetBool("isGrounded", isGrounded());
     } 
 
     public void Jump(InputAction.CallbackContext context)
@@ -43,19 +48,20 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-
     }
 
     public void Crouching(InputAction.CallbackContext context)
     {
         if(context.performed)
         {
+            animator.SetBool("isSliding", true);
             this.GetComponent<BoxCollider2D>().enabled = false;
             this.GetComponent<CircleCollider2D>().enabled = true; 
         } 
 
         else
         {
+            animator.SetBool("isSliding", false);
             this.GetComponent<BoxCollider2D>().enabled = true;
             this.GetComponent<CircleCollider2D>().enabled = false;
         }
