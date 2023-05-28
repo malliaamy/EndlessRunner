@@ -10,6 +10,9 @@ public class BGMusic : MonoBehaviour
 
     void Awake()
     {
+        PlayerPrefs.SetInt("Music", 2);
+        PlayerPrefs.SetInt("Sound", 2);
+
         audioSource = GetComponent<AudioSource>();
         if (instance != null)
             Destroy(gameObject);

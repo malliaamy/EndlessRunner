@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class toggleScript : MonoBehaviour
 {
     public Toggle toggler;
+
+    void Awake()
+    {
+        PlayerPrefs.SetInt("Music", 2);
+        PlayerPrefs.SetInt("Sound", 2);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +33,18 @@ public class toggleScript : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("Music", 2);
+        }
+    }
+
+    public void SoundToggle()
+    {
+        if (toggler.isOn)
+        {
+            PlayerPrefs.SetInt("Sound", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Sound", 2);
         }
     }
 }

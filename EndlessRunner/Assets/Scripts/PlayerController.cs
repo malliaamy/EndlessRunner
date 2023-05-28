@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     public float jumpingPower = 10f;
 
+    public AudioSource audioSource;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed && isGrounded())
         {
+            SoundManagerScript.PlaySound("jump");
             rb.velocity = new Vector2(0, jumpingPower);
         }
 
@@ -54,13 +57,14 @@ public class PlayerController : MonoBehaviour
     {
         if(context.performed)
         {
+            SoundManagerScript.PlaySound("slide");
             animator.SetBool("isSliding", true);
             this.GetComponent<BoxCollider2D>().enabled = false;
             this.GetComponent<CircleCollider2D>().enabled = true; 
         } 
-
-        else
+        else if (context.canceled)
         {
+            audioSource.Stop();
             animator.SetBool("isSliding", false);
             this.GetComponent<BoxCollider2D>().enabled = true;
             this.GetComponent<CircleCollider2D>().enabled = false;
@@ -82,6 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         if(other.CompareTag("Coin"))
         {
+            SoundManagerScript.PlaySound("coin");
             coinAmount = coinAmount + 1;
             coinText.text = coinAmount.ToString();
             Destroy(other.gameObject);

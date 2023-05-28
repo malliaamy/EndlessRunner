@@ -65,6 +65,7 @@ public class Health : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
+            SoundManagerScript.PlaySound("hit");
             currentHealth = currentHealth - 1;
             StartCoroutine("Invulnerable");
         }
